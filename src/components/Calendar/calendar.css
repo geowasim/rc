@@ -1,0 +1,149 @@
+/* .calendar_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.weekdays {
+  display: flex;
+  flex-direction: row;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-color: lightgray;
+}
+
+table {
+  width: 90vw;
+}
+tr {
+  padding: 5px;
+}
+th {
+  width: 14.285%;
+  height: 35px;
+}
+*/
+.table {
+  height: 80vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  display: table-cell;
+  border-collapse: collapse;
+}
+.thead {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+.tbody {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  min-height: 95%;
+  width: 100%;
+  border: 1px solid;
+  text-align: center;
+}
+.tr {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.td {
+  border: 1px dotted lightgray;
+  border-collapse: collapse;
+  text-align: right;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+.selectedDay {
+  /* background-color: rgba(186, 205, 232, 0.638); */
+}
+.selectedDate {
+  border-top: 1px solid rgb(99, 96, 96);
+  border-top-left-radius: 25px;
+}
+.td:hover {
+  background-color: rgba(186, 205, 232, 0.638);
+}
+.first_day {
+  grid-column-start: 3;
+}
+
+.calendar_date_change_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.previousMonth,
+.currentMonth,
+.notCurrentMonth,
+.nextMonth {
+  padding: 5px;
+}
+
+.currentMonth {
+  color: rgb(75, 75, 80);
+  font-weight: 600;
+  font-size: larger;
+}
+.notCurrentMonth {
+  color: lightgray;
+}
+
+.currentMonth,
+.notCurrentMonth {
+  padding: 5px;
+}
+
+.returToCurrentMonth button {
+  margin-left: 20px;
+}
+
+.today {
+  color: red;
+  background-color: rgba(141, 139, 139, 0.185);
+}
+ul {
+  max-height: auto;
+}
+ul li {
+  z-index: -10000;
+}
+ul li p {
+  font-size: 16px;
+}
+li .event_block {
+  border: 1px solid rgb(108, 16, 16);
+  margin-top: 0px;
+  text-align: left;
+  z-index: 10;
+}
+span {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .event_block {
+    font-size: 10px;
+  }
+}
